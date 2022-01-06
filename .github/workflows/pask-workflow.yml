@@ -1,0 +1,14 @@
+name: PASK Task Management
+on:
+  push:
+    branches:
+      - "**"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: HTTP Request Action
+        uses: fjogeleit/http-request-action@v1.8.1
+        with:
+          url: https://vercel-todo-server.vercel.app/api/update?id=OeBzGo4VTuXGNNNOJdft2HInhhA2&project=spacetagram&username=d-liya
+          method: POST
