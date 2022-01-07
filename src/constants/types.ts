@@ -8,3 +8,4 @@ export type ApiDataType = {
   title: string;
   url: string;
 };
+export type Status = "loading" | "error" | "success" | "idle";

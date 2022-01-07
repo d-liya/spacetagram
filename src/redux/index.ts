@@ -1,23 +1,22 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { useAppDispatch, useAppSelector } from "../hooks";
-import type { RootState } from "../store";
-import { ApiDataType } from "../constants/types";
+import { useAppSelector } from "../hooks";
+import { ApiDataType, Status } from "../constants/types";
 
 interface State {
   value: number;
-  isLoading: boolean;
+  status: Status;
   data: ApiDataType[];
   page: number;
   errorMessage?: string;
-  error: boolean;
+  likedImages: string[];
 }
 
 const initialState: State = {
   value: 0,
-  isLoading: false,
+  status: "idle",
   data: [],
   page: 1,
-  error: false,
+  likedImages: [],
 };
 
 export const commonSlice = createSlice({
@@ -30,23 +29,21 @@ export const commonSlice = createSlice({
     decrement: (state) => {
       state.value -= 1;
     },
-    // Use the PayloadAction type to declare the contents of `action.payload`
     incrementByAmount: (state, action: PayloadAction<number>) => {
       state.value += action.payload;
     },
-    handleLoading: (state, action: PayloadAction<boolean>) => {
-      state.isLoading = action.payload;
+    handleStatus: (state, action: PayloadAction<Status>) => {
+      state.status = action.payload;
     },
     handleDataChange: (state, action: PayloadAction<ApiDataType[]>) => {
       state.data = action.payload;
-      state.isLoading = false;
     },
-    handleError: (
-      state,
-      action: PayloadAction<{ message?: string; error: boolean }>
-    ) => {
-      state.error = action.payload.error;
-      state.errorMessage = action.payload.message;
+    handleError: (state, action: PayloadAction<string>) => {
+      state.status = "error";
+      state.errorMessage = action.payload;
+    },
+    handleLikedImages: (state, action: PayloadAction<string[]>) => {
+      state.likedImages = action.payload;
     },
   },
 });
@@ -55,14 +52,14 @@ export const {
   incrementPage,
   decrement,
   incrementByAmount,
-  handleLoading,
+  handleStatus,
   handleDataChange,
   handleError,
+  handleLikedImages,
 } = commonSlice.actions;
 
 export default commonSlice.reducer;
 
 export const useStore = () => {
-  const state = useAppSelector((state) => state.common);
-  return state;
+  return useAppSelector((state) => state.common);
 };
