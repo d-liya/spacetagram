@@ -131,7 +131,7 @@ To get a local copy up and running follow these simple example steps.
 ## Roadmap
 
 - [x] Identifying which technologies to use.
-- [x] Researching Shopify’s color palletes and design guide lines.  
+- [x] Researching about Shopify’s design system.  
 - [x] Coming up with a rough prototype which align with th Shopify’s ecosystem.
 - [x] Converting the design to code.
 - [x] Adding animations.
