@@ -1,46 +1,145 @@
-# Getting Started with Create React App
+<div id="#top"></div>
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">Spacestagram</h3>
 
-## Available Scripts
+  <p align="center">
+    Front End Developer Intern Challenge - Summer 2022
+  </p>
+</div>
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#the-challenge">The Challenge</a></li>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#key-features">Key Features</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+  </ol>
+</details>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- ABOUT THE PROJECT -->
+## About The Project
+![shopify-summer-challenge-mobile_AdobeCreativeCloudExpress](https://user-images.githubusercontent.com/45029973/148666270-7b7a149e-3a51-4bb4-824c-428ef587d4f8.gif)
+![shopify-summer-challenge-desktop_AdobeCreativeCloudExpress (2)](https://user-images.githubusercontent.com/45029973/148666238-2f8a0966-d08a-4e0c-846d-cb1e207c2e88.gif)
 
-### `npm run eject`
+This project was created as a part of shopify's summer intern challenge. Check out the 
+[Live Demo](https://spacetagram-zeta.vercel.app/) here.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<!-- THE CHALLENGE -->
+## The Challenge
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+We need a webpage that can pull images, and allow the user to “like” and “unlike” their favourite images.
 
-## Learn More
+We'd like a simple to use interface that makes it easy to:
+* Fetch data from one of NASA’s APIs and display the resulting images.
+* Display descriptive data for each image (for example: title, date, description, etc.)
+* Like an image
+* Unlike an image
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Built With
+
+
+* Typescript 
+* React.js
+* Redux
+* React Router
+* React Spring
+* Tailwind CSS
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+### Key Features
+
+* User friendly loading state and error handling.
+* Display title, image, description and the date.
+* Animated Like and dislike button (Heart).
+* Infinite scroll.
+* Saving likes if the user leave or reload the page.
+* Spring based animation.
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+
+1. Get a free API Key at [https://api.nasa.gov](https://api.nasa.gov)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/d-liya/spacetagram.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Create a .env file in the project root directory and add 
+   ```js
+   REACT_APP_NASA_API_KEY=<YOUR_API_KEY>
+   ```
+5. Start the Development server using  
+   ```sh
+   npm start
+   ```
+6. Visit localhost:3000 (Might change the port if it's already in use.)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] Identifying which technologies to use.
+- [x] Researching Shopify’s color palletes and design guide lines.  
+- [x] Coming up with a rough prototype which align with th Shopify’s ecosystem.
+- [x] Converting the design to code.
+- [x] Adding animations.
+- [x] Fixing edge cases (responsiveness)
+- [x] Testing & Deploying
+ 
+ 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
