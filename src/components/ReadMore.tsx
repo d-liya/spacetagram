@@ -43,7 +43,7 @@ export default function ReadMore() {
           </animated.time>
           <animated.p
             style={style}
-            className="py-2 px-5 overflow-scroll text-slate-900 text-center"
+            className="py-2 px-5 overflow-y-auto text-slate-900 text-center"
           >
             {data.explanation}
           </animated.p>
