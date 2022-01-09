@@ -43,8 +43,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-![shopify-summer-challenge-mobile_AdobeCreativeCloudExpress](https://user-images.githubusercontent.com/45029973/148666270-7b7a149e-3a51-4bb4-824c-428ef587d4f8.gif)
-![shopify-summer-challenge-desktop_AdobeCreativeCloudExpress (2)](https://user-images.githubusercontent.com/45029973/148666238-2f8a0966-d08a-4e0c-846d-cb1e207c2e88.gif)
+![Spacestagram Mobile Preview](https://user-images.githubusercontent.com/45029973/148666270-7b7a149e-3a51-4bb4-824c-428ef587d4f8.gif)
+![Spacestagram Desktop Preview](https://user-images.githubusercontent.com/45029973/148677581-d6590bd6-35ca-4e76-bce7-03fa506c574a.gif)
+
 
 This project was created as a part of shopify's summer intern challenge. Check out the 
 [Live Demo](https://spacetagram-zeta.vercel.app/) here.
