@@ -16,6 +16,8 @@ const Logo = () => (
     viewBox="0 0 248 72"
     fill="none"
     className="w-56"
+    aria-label="Spacestagram Logo"
+    role="img"
   >
     <g clipPath="url(#clip0_0_1)">
       <path

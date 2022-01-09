@@ -17,7 +17,7 @@ export default function Heart({
     <button
       onClick={onClick}
       className="cursor-pointer text-light-green relative"
-      aria-label="like the image"
+      aria-label="like"
       aria-pressed={isLiked}
     >
       <AiOutlineHeart size={25} />

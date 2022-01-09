@@ -11,6 +11,7 @@ export default function LoadingSVG() {
       width="100px"
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
+      aria-label="Loading"
     >
       <circle cx="84" cy="50" r="10" fill="#008060">
         <animate

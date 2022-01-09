@@ -17,7 +17,7 @@ export default function Loader({
     item ? (
       <animated.div style={style} className="text-center p-5 mx-5">
         <LoadingSVG />
-        <p className="font-medium text-light-green -mt-4">{text}</p>
+        <p className="font-medium text-green-100 -mt-4">{text}</p>
       </animated.div>
     ) : null
   );

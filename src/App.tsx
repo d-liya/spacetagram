@@ -1,16 +1,23 @@
 import React from "react";
-import "./App.css";
-import Header from "./components/Header";
-import Main from "./components/Main";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Home from "./components/Home";
+import ReadMore from "./components/ReadMore";
 
 function App() {
+  const location = useLocation();
+  const state = location.state as { backgroundLocation?: Location };
   return (
-    <div className="flex flex-1 justify-center">
-      <div className="flex flex-1  max-w-screen-2xl min-h-screen bg-sky-50 flex-col">
-        <Header />
-        <Main />
-      </div>
-    </div>
+    <React.Fragment>
+      <Routes location={state?.backgroundLocation || location}>
+        <Route path="/" element={<Home />} />
+      </Routes>
+
+      {state?.backgroundLocation && (
+        <Routes>
+          <Route path="/read-more/:date" element={<ReadMore />} />
+        </Routes>
+      )}
+    </React.Fragment>
   );
 }
 

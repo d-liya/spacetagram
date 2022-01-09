@@ -15,7 +15,7 @@ const initialState: State = {
   value: 0,
   status: "idle",
   data: [],
-  page: 1,
+  page: 0,
   likedImages: [],
 };
 
@@ -26,17 +26,14 @@ export const commonSlice = createSlice({
     incrementPage: (state) => {
       state.page += 1;
     },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload;
+    handlePage: (state, action: PayloadAction<number>) => {
+      state.page = action.payload;
     },
     handleStatus: (state, action: PayloadAction<Status>) => {
       state.status = action.payload;
     },
     handleDataChange: (state, action: PayloadAction<ApiDataType[]>) => {
-      state.data = action.payload;
+      state.data.push(...action.payload);
     },
     handleError: (state, action: PayloadAction<string>) => {
       state.status = "error";
@@ -50,12 +47,11 @@ export const commonSlice = createSlice({
 
 export const {
   incrementPage,
-  decrement,
-  incrementByAmount,
   handleStatus,
   handleDataChange,
   handleError,
   handleLikedImages,
+  handlePage,
 } = commonSlice.actions;
 
 export default commonSlice.reducer;
